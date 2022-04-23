@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./counter.component.scss']
 })
 export class CounterComponent implements OnInit {
-  public value = 123; 
+  public value = 10; 
   public text = 'ala ma kota';
 
   onClick () {
@@ -15,11 +15,11 @@ export class CounterComponent implements OnInit {
   }
 
 increment() {
-  this.value++;
+  this.value+=10;
 }
 
 decrement() {
-  this.value--;
+  this.value-=10;
 }
 
   constructor() { }
