@@ -8,7 +8,7 @@ import { Todo } from './model/todo';
 })
 export class TodosComponent implements OnInit {
   public todos: Todo[] = [];
-  public text: string ='type something';
+  public text: string ='';
 
   public clear () {
     this.text = ""
