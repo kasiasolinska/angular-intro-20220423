@@ -8,6 +8,14 @@ import { Todo } from './model/todo';
 })
 export class TodosComponent implements OnInit {
   public todos: Todo[] = [];
+  public text: string ='type something';
+
+  public clear () {
+    this.text = ""
+
+  }
+ 
+
 
   constructor() { }
 
