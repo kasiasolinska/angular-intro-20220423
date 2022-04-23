@@ -1,7 +1,17 @@
+<div *ngIf="!text">Type the code below...</div>
+
 <p>todos works!</p>
 
 <input [(ngModel)]="text" />
 
 <p>{{ text }}</p>
-
+<button (click)="addTodo()">add</button>
 <button (click)="clear()">Clear text</button>
+
+<div *ngIf="todos.length === 0">The list is empty</div>
+
+<ol>
+  <li *ngFor="let todo of todos">
+    {{ todo.text }}
+  </li>
+</ol>

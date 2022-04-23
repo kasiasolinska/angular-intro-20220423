@@ -15,7 +15,17 @@ export class TodosComponent implements OnInit {
 
   }
  
+public addTodo() {
+const todo: Todo = {
+  text: this.text,
+  created: Date.now(),
+  done: false,
+  priority: 1,
+};
 
+this.todos.push(todo) ;
+
+}
 
   constructor() { }
 
