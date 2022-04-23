@@ -1,12 +1,9 @@
-<div *ngIf="!text">Type the code below...</div>
+<div *ngIf="!text">Type the todo below…</div>
 
-<p>todos works!</p>
+<input [(ngModel)]="text" (keyup.enter)="addTodo()" />
 
-<input [(ngModel)]="text" />
-
-<p>{{ text }}</p>
 <button (click)="addTodo()">add</button>
-<button (click)="clear()">Clear text</button>
+<button (click)="clear()">clear</button>
 
 <div *ngIf="todos.length === 0">The list is empty</div>
 
@@ -19,14 +16,14 @@
     </span>
 
     <span class="priority">
-      <span
-        >[ngSwitch]="todo.priority">
+      <span [ngSwitch]="todo.priority">
         <span *ngSwitchCase="1">high</span>
         <span *ngSwitchCase="2">medium</span>
         <span *ngSwitchDefault>low</span>
       </span>
       priority
     </span>
-    <button>(click)="setDone(todo)"&check;</button>
+
+    <button (click)="setDone(todo)">&check;</button>
   </li>
 </ol>
