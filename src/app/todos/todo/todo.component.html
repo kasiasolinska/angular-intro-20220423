@@ -1,1 +1,6 @@
-<p>todo works!</p>
+<div [ngClass]="{done: todoInput.done}">
+  <input [(ngModel)]="todoInput.done" type="checkbox" />
+  <!-- teraz wyswieli sie jako checkbox-->
+  {{ todoInput.text }}
+  <!-- teraz wyswietli nam sie to co wpisujemy-->
+</div>

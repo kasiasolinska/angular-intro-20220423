@@ -7,25 +7,8 @@
 
 <ng-container *ngIf="todos.length === 0">The list is empty</ng-container>
 
-<ol>
-  <ng-container *ngFor="let todo of todos">
-    <li>
-      <input type="checkbox" [(ngModel)]="todo.done" />
+<div *ngFor="let todoItem of todos">
+  <!-- zeby bylo wiecej elementow-->
 
-      <span [ngClass]="{done: todo.done}" [ngStyle]="style">
-        {{ todo.text }}
-      </span>
-
-      <span class="priority">
-        <span [ngSwitch]="todo.priority">
-          <span *ngSwitchCase="1">high</span>
-          <span *ngSwitchCase="2">medium</span>
-          <span *ngSwitchDefault>low</span>
-        </span>
-        priority
-      </span>
-
-      <button (click)="setDone(todo)">&check;</button>
-    </li>
-  </ng-container>
-</ol>
+  <app-todo [todoInput]="todoItem"> </app-todo>
+</div>
