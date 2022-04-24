@@ -4,6 +4,7 @@ import { CounterComponent } from './counter/counter.component';
 import { TodosComponent } from './todos/todos.component';
 
 const routes: Routes = [
+
   {
     path: 'counter',
     component: CounterComponent,
@@ -16,10 +17,9 @@ const routes: Routes = [
   },
 
   {
-path: '',
+path: '**',
 redirectTo: 'todos',
 pathMatch: 'full',
-
 
   },
 ];
