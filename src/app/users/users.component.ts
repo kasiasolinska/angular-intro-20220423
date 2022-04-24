@@ -32,7 +32,7 @@ this.getUsers().subscribe(response => {
 }
 
   public getUsers(){
-    return this.http.get<UsersResponse>('http://regres.in/api/users');
+    return this.http.get<UsersResponse>('https://reqres.in/api/users');
   
   }
 }
