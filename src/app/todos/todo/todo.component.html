@@ -4,5 +4,10 @@
   {{ todoInput.text }}
   <!-- teraz wyswietli nam sie to co wpisujemy-->
 
+  <span>
+    {{ todoInput.created | date: 'yyyy-mm-dd HH:mm:ss:SSS' }}
+    <!-- format daty, godz-->
+  </span>
+
   <button (click)="onDeleteClick()">&cross;</button>
 </div>
