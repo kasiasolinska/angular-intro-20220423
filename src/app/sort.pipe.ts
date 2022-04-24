@@ -5,15 +5,14 @@ import {User} from './users/model/user';
 export class SortPipe implements PipeTransform {
   transform(
     array: User[],
-    property: keyof User,
+    property: keyof User, // id, last_name, first_name, email, avatar
   ): User[] {
     return array.sort(
       (first: User, second: User) => {
-        return first[property]
-          .toString()
-          .localeCompare(
-            second[property].toString(),
-          );
+        const firstProperty = first[property].toString();
+        const secondProperty = second[property].toString();
+
+        return firstProperty.localeCompare(secondProperty);
       },
     );
   }
