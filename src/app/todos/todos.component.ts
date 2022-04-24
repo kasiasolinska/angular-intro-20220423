@@ -43,6 +43,11 @@ export class TodosComponent implements OnInit {
 
   }
 
+
+  public removeAll(): void{
+this.todos = [];
+this.storageService.saveTodos(this.todos);
+  }
   constructor(
     private storageService: StorageService) { 
 

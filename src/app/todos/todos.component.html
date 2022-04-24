@@ -5,6 +5,8 @@
 <button (click)="addTodo()">add</button>
 <button (click)="clear()">clear</button>
 
+<button (click)="removeAll()">remove all todos</button>
+
 <ng-container *ngIf="todos.length === 0">The list is empty</ng-container>
 
 <div *ngFor="let todoItem of todos | slice: 0:5">
