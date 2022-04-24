@@ -3,6 +3,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { CounterComponent } from './counter/counter.component';
 import { TimerComponent } from './timer/timer.component';
 import { TodosComponent } from './todos/todos.component';
+import { UsersComponent } from './users/users.component';
 
 const routes: Routes = [
 
@@ -11,6 +12,10 @@ const routes: Routes = [
     component: TimerComponent,
   },
 
+  {
+    path: 'users',
+    component: UsersComponent,
+  },
   {
     path: 'counter',
     component: CounterComponent,
