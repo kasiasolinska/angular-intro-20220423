@@ -10,9 +10,10 @@ import { TimerComponent } from './timer/timer.component';
 import { UsersComponent } from './users/users.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HighlightDirective } from './highlight.directive';
+import { ReversePipe } from './reverse.pipe';
 
 @NgModule({
-  declarations: [AppComponent, CounterComponent, TodosComponent, TodoComponent, TimerComponent, UsersComponent, HighlightDirective],
+  declarations: [AppComponent, CounterComponent, TodosComponent, TodoComponent, TimerComponent, UsersComponent, HighlightDirective, ReversePipe],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule,],
   providers: [],
   bootstrap: [AppComponent],
